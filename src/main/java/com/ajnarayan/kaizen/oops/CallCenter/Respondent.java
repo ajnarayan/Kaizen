@@ -3,13 +3,9 @@ package com.ajnarayan.kaizen.oops.CallCenter;
 public class Respondent extends Manager implements Employee {
 
 
-    private static boolean isAvailabe = true;
+    private static EmployeeStatus status = EmployeeStatus.AVAILABLE;
     private Respondent _instance = null;
 
-    /**
-     * Singleton pattern makes sure only 1 instance of Director is present at any time.
-     * @return
-     */
     private Respondent getInstance(){
         if ( _instance == null){
             _instance = new Respondent();
@@ -19,9 +15,9 @@ public class Respondent extends Manager implements Employee {
 
     @Override
     public void dispatchCall() {
-        if(isAvailabe){
+        if(status.equals(EmployeeStatus.AVAILABLE)){
             System.out.println("Assigning call to Respondent");
-            isAvailabe = false;
+            status = EmployeeStatus.ONCALL;
         }else {
             System.out.println("Respondent busy, escalating");
             super.dispatchCall();
@@ -31,7 +27,7 @@ public class Respondent extends Manager implements Employee {
     @Override
     public void currentStatus() {
         super.currentStatus();
-        System.out.println("Respondent is Available? " + isAvailabe);
+        System.out.println("Respondent is currently " + status.getValue());
     }
 
 

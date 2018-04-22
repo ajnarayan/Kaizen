@@ -1,8 +1,11 @@
 package com.ajnarayan.kaizen.oops.CallCenter;
 
+import static com.ajnarayan.kaizen.oops.CallCenter.EmployeeStatus.AVAILABLE;
+import static com.ajnarayan.kaizen.oops.CallCenter.EmployeeStatus.ONCALL;
+
 public class Director implements Employee {
 
-    private static boolean isAvailabe = true;
+    private static EmployeeStatus status = AVAILABLE;
     private Director _instance = null;
 
     /**
@@ -18,14 +21,16 @@ public class Director implements Employee {
 
     @Override
     public void dispatchCall() {
-        if(isAvailabe){
+        if(status.equals(AVAILABLE)){
             System.out.println("Assigning call to Director");
-            isAvailabe = false;
+            status = ONCALL;
+        }else{
+            System.out.println("All employees are busy! Please try again later");
         }
     }
 
     @Override
     public void currentStatus() {
-        System.out.println("Director is Available? " + isAvailabe);
+        System.out.println("Director is currently " + status.getValue());
     }
 }
