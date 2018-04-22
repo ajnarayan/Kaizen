@@ -1,0 +1,5 @@
+rootProject.name = 'kaizen'
+include 'designprinciples'
+include 'kaizen-launcher'
+rootProject.name = 'kaizen'
+
