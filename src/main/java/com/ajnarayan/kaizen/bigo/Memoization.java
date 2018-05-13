@@ -4,6 +4,8 @@ public class Memoization {
 
     /**
      * Prints fibonacci numbers from 0..n
+     * Runtime: O(n)
+     * Without memo: O(2^n)
      * @param n
      */
     private static void allFib(int n){
