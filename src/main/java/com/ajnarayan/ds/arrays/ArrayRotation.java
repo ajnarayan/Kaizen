@@ -5,6 +5,8 @@ package com.ajnarayan.ds.arrays;
  */
 public class ArrayRotation {
 
+
+    //Runtime O(n), Space O(n)
     private static int[] rotate(int inputArray[], int d, int n){
 
         if(n<=0){
@@ -19,6 +21,34 @@ public class ArrayRotation {
 
         return tempArray;
     }
+
+
+    /*
+    //Runtime O(n), space O(d)
+    private static int[] rotate(int inputArray[], int d , int n){
+        int[] tempArray = new int[d];
+        for(int i = 0; i<d; i++){
+            tempArray[i] = inputArray[i]; //O(d)
+        }
+
+        //shift remaining by d towards left
+        int j = 0;
+        while(j < n-d){
+            int temp = inputArray[j];
+            inputArray[j] = inputArray[j+d];
+            inputArray[j+d] = temp;
+            j++;
+        }
+
+        int k = n-d;
+        j =0;
+        while (k<n){
+            inputArray[k] = tempArray[j];
+            j++; k++;
+        }
+        return inputArray;
+    }
+    */
 
     private static void printArray(int inputArray[]){
         for(int i =0; i<inputArray.length; i++){
