@@ -1,12 +1,6 @@
 package com.ajnarayan.ds.arrays;
 
-/**
- * You are given a list of n-1 integers and these integers are in the range of
- * 1 to n. There are no duplicates in list. One of the integers is missing in
- * the list.
- *
- * Also use sum and subtract - integer overflow if sum is large.
- */
+
 public class MissingNumber {
 
     public static void main(String[] args) {
@@ -14,6 +8,13 @@ public class MissingNumber {
         System.out.println("The missing number is: " + findMissing(input));
     }
 
+    /**
+     * You are given a list of n-1 integers and these integers are in the range of
+     * 1 to n. There are no duplicates in list. One of the integers is missing in
+     * the list.
+     *
+     * Also use sum and subtract - integer overflow if sum is large.
+     */
     private static int findMissing(int[] input) {
         int missingNumber = -1;
         int xorInput = input[0];
