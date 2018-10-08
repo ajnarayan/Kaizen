@@ -1,5 +1,4 @@
 # kaizen
 
-This project is implementation of all the interesting problems in python
+This project is implementation of all the interesting problems found online
 
-This overrides the previous gradle java implementation
