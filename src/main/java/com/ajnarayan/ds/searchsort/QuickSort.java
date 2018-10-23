@@ -3,17 +3,10 @@ package com.ajnarayan.ds.searchsort;
 import java.util.Random;
 import java.util.logging.Logger;
 
-public class QuickSort {
+public class QuickSort extends BaseArray{
 
     private static final Random RANDOM = new Random();
     private static final Logger LOG = Logger.getLogger(QuickSort.class.getSimpleName());
-
-    private static void printArray(int[] input) {
-        for(int i =0 ; i < input.length; i++){
-            System.out.print(input[i] + " ");
-        }
-        System.out.println(" ");
-    }
 
     public static void main(String[] args) {
 
