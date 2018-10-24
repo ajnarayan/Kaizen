@@ -8,7 +8,7 @@ public class PermutationStrings {
     public static void main(String[] args){
         String a = "aab";
         String b = "bab";
-        System.out.println(" The two string are of the same permutation : " + isPermutation(a,b));
+        System.out.println(" The two string are of the same permutation : " + permutation(a,b));
     }
 
     /**
@@ -52,6 +52,35 @@ public class PermutationStrings {
             }
         }
         return isStringsPermutation;
+    }
+
+
+    /**
+     * Time O(n)
+     * space O(1)
+     * @param a
+     * @param b
+     * @return
+     */
+    private static boolean permutation(String a, String b){
+        if(a.length() != b.length()){
+            return false;
+        }
+
+        int[] charAsciiCount = new int[128];
+
+        for(char c : a.toCharArray()){
+            charAsciiCount[c]++;
+        }
+
+        for(char c : b.toCharArray()){
+            charAsciiCount[c]--;
+            if(charAsciiCount[c] <0){
+                return false;
+            }
+        }
+
+        return true;
     }
 
     //TODO: sort and compare two; nlogn
