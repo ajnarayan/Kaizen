@@ -8,4 +8,11 @@ public abstract class BaseArray {
         }
         System.out.println(" ");
     }
+
+    protected static void printArray(String[] input) {
+        for(String s : input){
+            System.out.print(s + " ");
+        }
+        System.out.println(" ");
+    }
 }

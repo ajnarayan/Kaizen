@@ -1,5 +1,10 @@
 package com.ajnarayan.ds.searchsort;
 
+
+/**
+ * Given two sorted arrays with one array having enough space to fit the other
+ * Merge the two arrays such that the result is sorted array 
+ */
 public class MergeArray extends BaseArray {
 
     public static void main(String[] args) {
