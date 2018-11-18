@@ -21,28 +21,20 @@ public class RankFromStream extends BaseArray {
         printArray(input);
 
         for (int i = 0; i < 10; i++) {
-            track(i);
+            if (i==0) {
+                rankNode = new RankNode(input[i]);
+            } else {
+                rankNode.insert(input[i]);
+            }
         }
 
         int randomIndex = getRandomElement();
-        System.out.println("Rank of " + input[randomIndex] + " : "
-                + rankNode.getRank(input[randomIndex]));
-
-        randomIndex = getRandomElement();
-        System.out.println("Rank of " + input[randomIndex] + " : "
+        System.out.println("Rank of " + input[randomIndex]+ " : "
                 + rankNode.getRank(input[randomIndex]));
     }
 
     private static int getRandomElement() {
         return RANDOM.nextInt(10);
-    }
-
-    private static void track(int i) {
-        if (rankNode == null) {
-            rankNode = new RankNode(i);
-        } else {
-            rankNode.insert(i);
-        }
     }
 
 
