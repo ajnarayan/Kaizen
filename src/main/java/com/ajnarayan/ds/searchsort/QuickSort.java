@@ -1,9 +1,11 @@
 package com.ajnarayan.ds.searchsort;
 
+import com.ajnarayan.ds.searchsort.util.BaseArray;
+
 import java.util.Random;
 import java.util.logging.Logger;
 
-public class QuickSort extends BaseArray{
+public class QuickSort extends BaseArray {
 
     private static final Random RANDOM = new Random();
     private static final Logger LOG = Logger.getLogger(QuickSort.class.getSimpleName());

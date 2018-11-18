@@ -1,6 +1,8 @@
 package com.ajnarayan.ds.searchsort;
 
 
+import com.ajnarayan.ds.searchsort.util.BaseArray;
+
 /**
  * Given two sorted arrays with one array having enough space to fit the other
  * Merge the two arrays such that the result is sorted array 

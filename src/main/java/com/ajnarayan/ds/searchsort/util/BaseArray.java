@@ -1,4 +1,4 @@
-package com.ajnarayan.ds.searchsort;
+package com.ajnarayan.ds.searchsort.util;
 
 public abstract class BaseArray {
 
@@ -15,4 +15,5 @@ public abstract class BaseArray {
         }
         System.out.println(" ");
     }
+
 }
